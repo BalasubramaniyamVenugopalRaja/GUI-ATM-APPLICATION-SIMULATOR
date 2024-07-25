@@ -31,4 +31,6 @@ This is a full ATM GUI application developed using C# and WPF in .NET Framework.
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/ATMApplicationGUI.git
+   git clone https://github.com/BalasubramaniyamVenugopalRaja/ATMApplicationGUI.git
+
+   video link 
