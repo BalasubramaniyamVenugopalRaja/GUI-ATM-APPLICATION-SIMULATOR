@@ -1,0 +1,78 @@
+﻿<Window x:Class="ATMApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ATM Application" Height="500" Width="600">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Customer Portal">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/wallpaperflare.com_wallpaper (1).jpg"/>
+                    </Grid.Background>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Grid Margin="10">
+                            <TextBox Name="AccountNumberTextBox" Width="200"/>
+                            <TextBlock Text="Enter Account Number" Foreground="Gray" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                                       Margin="5,0,0,0" IsHitTestVisible="False"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=AccountNumberTextBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        </Grid>
+                        <Button Name="SelectAccountButton" Content="Select Account" Width="200" Margin="10" Click="SelectAccountButton_Click"/>
+                        <Grid Margin="10">
+                            <TextBox Name="AmountTextBox" Width="200"/>
+                            <TextBlock Text="Enter Amount" Foreground="Gray" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                                       Margin="5,0,0,0" IsHitTestVisible="False"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=AmountTextBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        </Grid>
+                        <Button Name="DepositCashButton" Content="Deposit Cash" Width="200" Margin="10" Click="DepositCashButton_Click"/>
+                        <Button Name="WithdrawCashButton" Content="Withdraw Cash" Width="200" Margin="10" Click="WithdrawCashButton_Click"/>
+                        <Button Name="CheckBalanceButton" Content="Check Balance" Width="200" Margin="10" Click="CheckBalanceButton_Click"/>
+                        <Button Name="DisplayTransactionsButton" Content="Display Transactions" Width="200" Margin="10" Click="DisplayTransactionsButton_Click"/>
+                        <Button Name="ExitCustomerButton" Content="Exit" Width="200" Margin="10" Click="ExitCustomerButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Admin">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/wallpaperflare.com_wallpaper.jpg"/>
+                    </Grid.Background>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Grid Margin="10">
+                            <TextBox Name="NewAccountNumberTextBox" Width="200"/>
+                            <TextBlock Text="Enter New Account Number" Foreground="Gray" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                                       Margin="5,0,0,0" IsHitTestVisible="False"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=NewAccountNumberTextBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        </Grid>
+                        <Grid Margin="10">
+                            <TextBox Name="InitialBalanceTextBox" Width="200"/>
+                            <TextBlock Text="Enter Initial Balance" Foreground="Gray" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                                       Margin="5,0,0,0" IsHitTestVisible="False"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=InitialBalanceTextBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        </Grid>
+                        <Grid Margin="10">
+                            <TextBox Name="InterestRateTextBox" Width="200"/>
+                            <TextBlock Text="Enter Interest Rate" Foreground="Gray" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                                       Margin="5,0,0,0" IsHitTestVisible="False"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=InterestRateTextBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        </Grid>
+                        <Grid Margin="10">
+                            <TextBox Name="AccountHolderNameTextBox" Width="200"/>
+                            <TextBlock Text="Enter Account Holder Name" Foreground="Gray" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                                       Margin="5,0,0,0" IsHitTestVisible="False"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=AccountHolderNameTextBox, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        </Grid>
+                        <Button Name="CreateAccountButton" Content="Create Account" Width="200" Margin="10" Click="CreateAccountButton_Click"/>
+                        <Button Name="ExitAdminButton" Content="Exit" Width="200" Margin="10" Click="ExitAdminButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
+
