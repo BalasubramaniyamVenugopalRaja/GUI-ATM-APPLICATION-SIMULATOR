@@ -27,10 +27,10 @@ This is a full ATM GUI application developed using C# and WPF in .NET Framework.
 - **AtmApplication Class**: Implements the interaction with the user, displays menus, takes input from the user, and displays the output.
 - **MainWindow**: Provides the GUI for the application using WPF.
 
+A video demonstration of the application can be found [here](https://youtu.be/ytd9LIKnE-I).
+
 ### How to Run
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/BalasubramaniyamVenugopalRaja/ATMApplicationGUI.git
-
-   video link 
